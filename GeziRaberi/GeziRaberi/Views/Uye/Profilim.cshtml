@@ -1,0 +1,174 @@
+﻿@model List<GeziRaberi.Models.Siniflar.Admin>
+@{
+    Layout = null;
+}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Profile  with Flat Responsive widget Design :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Square Profile Widget a Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="~/web4/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/web4/css/style.css" rel='stylesheet' type='text/css' />
+
+    <!--webfonts-->
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <!--//webfonts-->
+
+</head>
+<body>
+
+    <!-- main -->
+
+    <div class="center-container">
+
+        <div class="w3ls_banner_info">
+
+
+            <h1>Sitemize Hoşgeldiniz 👋</h1>
+            <div class="profile">
+                <div class="wrap">
+                    <div class="profile-main">
+                        <div class="profile-pic wthree">
+                            @foreach (var x in Model)
+                            {
+                                <img src="@x.Imge" alt="">
+                                <h3>@x.AdSoyad</h3>
+                            }
+                            <div class="w3ls-agile-left">
+                                <!---728x90--->
+
+                                <ul class="address">
+                                    <li>
+                                        @foreach (var x in Model)
+                                        {
+                                            <ul class="address-text">
+                                                <li><b>Kulanıcı Adı </b></li>
+                                                <li>: </li>
+                                                <li> <span class="w3">@x.KulaniciAdi</span></li>
+                                            </ul>
+                                        }
+                                    </li>
+
+                                    <li>
+                                        @foreach (var x in Model)
+                                        {
+                                            <ul class="address-text">
+                                                <li><b>Email Adresi </b></li>
+                                                <li>: </li>
+                                                <li> <span class="w3">@x.Mail</span></li>
+                                            </ul>
+                                        }
+                                    </li>
+                                    <li>
+                                        @foreach (var x in Model)
+                                        {
+                                            <ul class="address-text">
+                                                <li><b>PHONE </b></li>
+                                                <li>: </li>
+                                                <li> <span class="w3">@x.Telephone</span></li>
+                                            </ul>
+                                        }
+                                    </li>
+
+
+                                </ul>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="clear"> </div>
+                        <div class="profile-follows">
+
+                            <div class="follow-btn">
+                                <h3><a href="/Default/Index/">Ana Sayfaya Get</a></h3>
+                            </div>
+                            <div class="follow">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--footer-->
+            <div class="footer-w3">
+                <p>&copy; 2018 Square Profile Widget. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+            </div>
+            <!--//footer-->
+
+        </div>
+    </div>
+    <!-- //main -->
+
+    <script src="js/jquery.min.v3.js"></script>
+    <script src="js/jquery.circlechart.js"></script>
+    <script>
+        $('.demo-1').percentcircle();
+
+        $('.demo-2').percentcircle({
+            animate: false,
+            diameter: 100,
+            guage: 3,
+            coverBg: '#000',
+            bgColor: '#ff0000',
+            fillColor: '#000',
+            percentSize: '50px',
+            percentWeight: 'normal'
+        });
+
+
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+
+
+</body>
+</html>
+
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+
+    .btn {
+        width: 200px;
+        height: 20px;
+        text-align: center;
+    }
+</style>

@@ -1,0 +1,46 @@
+﻿@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Resim/1423262.jpg');
+    background-size:cover;
+}
+
+:root {
+    --main-font: 'Pacifico' cursive;
+}
+
+html {
+    font-family: sans-serif;
+}
+.box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #0d9dbb;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--main-font);
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.8);
+    box-shadow: 0 15px 25px rgb(0, 128, 255);
+    border-left: 10px;
+    transition: 0.5s;
+}
+
+    .box:hover {
+        -webkit-box-shadow: 0px 13px 60px 0px rgba(227,9,114,1);
+        -moz-box-shadow: 0px 13px 60px 0px rgba(227,9,114,1);
+        box-shadow: 0px 13px 60px 0px rgba(227,9,114,1);
+    }
+

@@ -1,0 +1,107 @@
+﻿
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<link href="~/loginstyle.css" rel="stylesheet" />
+<div class="box">
+    <h2>Admin Girişi</h2>
+    <hr />
+    <br />
+    <br />
+    @using (Html.BeginForm("Login", "AdminYonetim", FormMethod.Post))
+    {
+
+        @Html.TextBox("KulaniciAdi")
+        <label><i class="fa fa-user" aria-hidden="true"></i> Kulanıcı Adı:</label>
+        <br />
+        @Html.Password("Password")
+        <label><i class="fa fa-lock" aria-hidden="true"></i> Şifre:</label>
+        <br />
+
+        <button id="btg" class="btn btn-outline-primary">Giriş Yap</button>
+
+    }
+    <br />
+    @{
+        if (ViewBag.Error != null)
+        {
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>@ViewBag.Error!</strong>
+            </div>
+        }
+    }
+</div>
+
+
+<style>
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+    }
+
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+        .closebtn:hover {
+            color: black;
+        }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('../../Resim/istanbul_3.jpg');
+        background-size: cover;
+    }
+
+    .box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        background: transparent;
+        outline: none;
+    }
+
+    .box label {
+        position: absolute;
+        margin-top: -33px;
+        left: 35px;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #0d9dbb;
+        pointer-events: none;
+    }
+
+    #btg {
+        width: 150px;
+        font-size: 16px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #0d9dbb;
+        background: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 20px;
+
+    }
+
+        #btg:hover {
+            color: #fff;
+            background: #0d9dbb;
+        }
+</style>

@@ -1,0 +1,9 @@
+﻿@model List<GeziRaberi.Models.Siniflar.Admin>
+<div>
+    @foreach (var x in Model)
+    {
+        <img src="@x.Imge" class="profile_image" alt="">
+        <h2>@x.KulaniciAdi</h2>
+    }
+
+</div>

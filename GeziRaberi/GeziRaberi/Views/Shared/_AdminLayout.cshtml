@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/webadmintamp/StyleSheet1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="checkbox" id="check">
+    <!--Hedar area Start -->
+
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>Admin <span>Panali</span></h3>
+        </div>
+        <div class="right_area">
+            @using (Html.BeginForm())
+            {
+                <a href="/AdminYonetim/Login/"  class="logout_btn">logout</a>
+            }
+           
+        </div>
+    </header>
+    <!--Hedar area end -->
+    <!--Sidebar area end -->
+    <div class="sidebar">
+        <center>
+            <div>  @Html.Action("Partial1", "AdminYonetim")</div>
+          
+
+        </center>
+        <a href="/Default/index/"><i class="fas fa-home"></i><span>Siteye Get</span></a>
+        <a href="/Admin/Index/"><i class="fas fa-desktop"></i><span>Bloglar</span></a>
+        <a href="/Admin/YorumListesi/"><i class="fas fa-comment"></i><span>Yorumlar</span></a>
+        <a href=""><i class="fas fa-info-circle"></i><span>Hakimizda</span></a>
+        <a href="/Admin/IletisimList/"><i class="fas fa-phone"></i><span>İletişim ve Mesajlar</span></a>
+        <a href="/AdminYonetim/Index/"><i class="fas fa-users"></i><span>Admin ve Üyeler</span></a>
+    </div>
+
+    <!--Sidebar area end -->
+    <div class="content">@RenderBody()</div>
+</body>
+</html>
